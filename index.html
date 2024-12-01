@@ -18,7 +18,7 @@
             background-size: cover;
             background-position: center center;
             background-attachment: fixed;
-            animation: fade-in 2s;
+            animation: fade-in 0.75s;
         }
         #specs{
             position: relative;
@@ -26,7 +26,7 @@
             margin-left: 10px;
             width: max-content;
             float: left;
-            animation: fade-in 2s;
+            animation: fade-in-spec 1s;
             
         }
         ul{
@@ -49,6 +49,7 @@
             border-radius: 0px 0px 5px 5px;
         }
         li{
+            color: white;
             font-size: 125%;
             padding-left: 5px;
             padding-right: 5px;
@@ -66,6 +67,15 @@
             }
         }
 
+        @keyframes fade-in-spec {
+            0%,50% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
         @keyframes fade-out {
             from {
                 opacity: 1;
@@ -77,15 +87,35 @@
     </style>
 </head>
 <body>
-    <div id="background">
+    <div id="background" onclick="toggle()">
     </div>
-    <div id="specs">
+    <div id="specs" >
         <ul>
             <li>Ryzen 7 5800HS</li>
             <li>16GB</li>
             <li>SiliconPower XD80 2TB</li>
             <li>RTX 3050 mobile</li>
+            <li>Click to hide me :)</li>
         </ul>
     </div>
+    <!-- <div id="info">
+        <p>click the photo to hide specs</p>
+    </div> -->
+
+
+    <script>
+        fade_stat = true
+        function toggle(){
+            let specs = document.getElementById("specs")
+            if (fade_stat == true) {
+                specs.style.animation = "fade-out 0.75s forwards"
+                fade_stat = false
+            }
+            else if (fade_stat == false) {
+                specs.style.animation = "fade-in 0.75s forwards"
+                fade_stat = true 
+            }
+        }
+    </script>
 </body>
 </html>
