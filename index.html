@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Zephie</title>
+    <title>Lynette's/Main Rig</title>
     <style>
         ul{
             margin: 0;
@@ -26,8 +26,7 @@
             margin-left: 10px;
             width: max-content;
             float: left;
-            animation: fade-in-spec 1s;
-            
+            animation: fade-in-spec 1s; 
         }
         ul{
             list-style-type: none;
@@ -36,16 +35,15 @@
             padding-left: 0px;
         }
         li:nth-child(odd){
-            background-color: rgba(107, 102, 93, 0.75);
+            background-color: rgba(237, 160, 5,0.5);
         }
-
         li:nth-child(even){
-            background-color: rgba(190, 190, 190, 0.75);
+            background-color: rgba(150, 66, 158,0.5);
         }
         li:nth-child(1){
             border-radius: 5px 5px 0px 0px;
         }
-        li:nth-child(4){
+        li:nth-child(6){
             border-radius: 0px 0px 5px 5px;
         }
         li{
@@ -66,7 +64,6 @@
                 opacity: 1;
             }
         }
-
         @keyframes fade-in-spec {
             0%,50% {
                 opacity: 0;
@@ -75,7 +72,6 @@
                 opacity: 1;
             }
         }
-
         @keyframes fade-out {
             from {
                 opacity: 1;
@@ -87,35 +83,15 @@
     </style>
 </head>
 <body>
-    <div id="background" onclick="toggle()">
-    </div>
-    <div id="specs" >
+    <div id="specs">
         <ul>
-            <li>Ryzen 7 5800HS</li>
-            <li>16GB</li>
-            <li>SiliconPower XD80 2TB</li>
-            <li>RTX 3050 mobile</li>
-            <li>Click to hide me :)</li>
+            <li>Ryzen 9 5900x</li>
+            <li>16GB 3600mhz cl16</li>
+            <li>Sabrent Rocket 4 Plus 2TB SSD</li>
+            <li>Teamgroup MP34 4TB SSD</li>
+            <li>Seagate Barracuda 2TB HDD</li>
+            <li>AORUS RTX 4070 Ti Master</li>
         </ul>
     </div>
-    <!-- <div id="info">
-        <p>click the photo to hide specs</p>
-    </div> -->
-
-
-    <script>
-        fade_stat = true
-        function toggle(){
-            let specs = document.getElementById("specs")
-            if (fade_stat == true) {
-                specs.style.animation = "fade-out 0.75s forwards"
-                fade_stat = false
-            }
-            else if (fade_stat == false) {
-                specs.style.animation = "fade-in 0.75s forwards"
-                fade_stat = true 
-            }
-        }
-    </script>
 </body>
 </html>
